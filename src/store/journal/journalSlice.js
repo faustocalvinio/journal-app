@@ -7,6 +7,7 @@ export const journalSlice = createSlice({
         messageSaved: '',
         notes: [],
         active: null,
+        displayedMenu:false,
         // active: {
         //     id: 'ABC123',
         //     title: '',
@@ -60,14 +61,19 @@ reducers: {
         state.notes = [];
         state.active = null;
     
-    }
+    },
+    changeMenuState: (state) => {
+        state.displayedMenu = !state.displayedMenu;
+    },
 }
 });
 
 export const {    
     addNewEmptyNote,
     clearNotesLogout,
+    changeMenuState,
     deleteNoteById,
+    displayedMenu,
     savingNewNote,
     setActiveNote,
     setNotes,

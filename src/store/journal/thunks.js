@@ -8,8 +8,8 @@ export const startNewNote = () => {
         dispatch ( savingNewNote() );
         const { uid } = getState().auth;        
         const newNote = {
-            title: 'Quinta',
-            body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+            title: '',
+            body: '',
             imageUrls: [],
             date: new Date().getTime(),
         };

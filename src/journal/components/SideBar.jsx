@@ -31,6 +31,7 @@ export const SideBar = ({ drawerWidth = 240 }) => {
                     </Typography>
                     <IconButton
                         onClick={()=>dispatch( changeMenuState() )}
+                        sx={{ display: { md: 'none' } }}
                     >
                         <CloseOutlined />
                     </IconButton>

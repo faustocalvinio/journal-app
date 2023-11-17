@@ -8,7 +8,13 @@ export const SideBarItem = ({title,id,body,date,imageUrls=[] }) => {
     const dispatch = useDispatch();
     const onSetActiveNote = () => {
         dispatch ( setActiveNote({id,title,body,date,imageUrls}) );
-        dispatch( changeMenuState() );
+       
+        if( window.innerWidth <= 600 ){
+            // console.log();
+            dispatch(changeMenuState());
+            // console.log('test');
+          }
+
     };
 
     const newTitle = useMemo(() => {

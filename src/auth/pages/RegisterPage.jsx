@@ -9,9 +9,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { startCreatingUserWithEmailAndPassword } from '../../store/auth/thunks';
 
 const formData={
-  email: 'johndoe@email.com',
-  password:'123456',
-  displayName:'John Doe'
+  email: '',
+  password:'',
+  displayName:''
 }
 
 const formValidations = {

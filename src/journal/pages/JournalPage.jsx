@@ -6,6 +6,8 @@ import { AddOutlined } from '@mui/icons-material';
 import { JournalLayout } from '../layout/JournalLayout';
 import { NoteView, NothingSelectedView } from '../views';
 import { startNewNote } from '../../store/journal/thunks';
+import { useEffect } from 'react';
+import { changeMenuState } from '../../store/journal';
 
 export const JournalPage = () => {
   const dispatch = useDispatch();
@@ -14,6 +16,16 @@ export const JournalPage = () => {
   const onClickNewNote = () => {
     dispatch ( startNewNote() );
   };
+
+  useEffect(() => {
+    if( window.innerWidth > 600 ){
+      // console.log();
+      dispatch(changeMenuState());
+      console.log('test');
+    }
+  }, [window.innerWidth])
+  
+
 
   return (
     <JournalLayout>   

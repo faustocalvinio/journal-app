@@ -42,12 +42,15 @@ export const NoteView = () => {
             cancelButtonText: 'No, cancelar'
           }).then((result) => {
             if (result.isConfirmed) {
-                dispatch( startDeletingNote() )
+                dispatch( startDeletingNote() );
               Swal.fire(
                 'Nota borrada',
                 'La nota ha sido borrada',
                 'success'
-              )
+              );
+              setTimeout(() => {
+                Swal.close();            
+            }, 1600);
             }
           })
     };
@@ -55,6 +58,9 @@ export const NoteView = () => {
     useEffect(() => {
       if (messageSaved.length > 0) {
         Swal.fire('Nota actualizada', messageSaved, 'success');
+        setTimeout(() => {
+            Swal.close();            
+        }, 1600);
     }}, [messageSaved]);    
 
     useEffect(() => {

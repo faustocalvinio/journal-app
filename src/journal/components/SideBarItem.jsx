@@ -10,9 +10,7 @@ export const SideBarItem = ({title,id,body,date,imageUrls=[] }) => {
         dispatch ( setActiveNote({id,title,body,date,imageUrls}) );
        
         if( window.innerWidth <= 600 ){
-            // console.log();
             dispatch(changeMenuState());
-            // console.log('test');
           }
 
     };

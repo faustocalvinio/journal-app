@@ -18,10 +18,8 @@ export const JournalPage = () => {
   };
 
   useEffect(() => {
-    if( window.innerWidth > 600 ){
-      // console.log();
-      dispatch(changeMenuState());
-      console.log('test');
+    if( window.innerWidth > 600 ){      
+      dispatch(changeMenuState());      
     }
   }, [window.innerWidth])
   
